@@ -13,6 +13,9 @@
 		0E0EA74E266F664A0043C2F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E0EA74D266F664A0043C2F2 /* Assets.xcassets */; };
 		0E0EA751266F664A0043C2F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0EA74F266F664A0043C2F2 /* LaunchScreen.storyboard */; };
 		0E0EA759266F6B640043C2F2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0EA758266F6B640043C2F2 /* TableViewController.swift */; };
+		0E0EA75D266F6CDA0043C2F2 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0EA75C266F6CDA0043C2F2 /* NewsCell.swift */; };
+		0E0EA760266F89880043C2F2 /* NewtworkNewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0EA75F266F89880043C2F2 /* NewtworkNewsManager.swift */; };
+		0E0EA762266F89BC0043C2F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0EA761266F89BC0043C2F2 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		0E0EA750266F664A0043C2F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E0EA752266F664A0043C2F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E0EA758266F6B640043C2F2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		0E0EA75C266F6CDA0043C2F2 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		0E0EA75F266F89880043C2F2 /* NewtworkNewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtworkNewsManager.swift; sourceTree = "<group>"; };
+		0E0EA761266F89BC0043C2F2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,8 @@
 		0E0EA743266F66480043C2F2 /* NYTPopularArticles */ = {
 			isa = PBXGroup;
 			children = (
-				0E0EA758266F6B640043C2F2 /* TableViewController.swift */,
+				0E0EA763266F89F70043C2F2 /* Model */,
+				0E0EA75E266F6D7A0043C2F2 /* ViewController */,
 				0E0EA75A266F6B7D0043C2F2 /* Storyboards */,
 				0E0EA75B266F6B8F0043C2F2 /* Supporting */,
 			);
@@ -75,12 +82,30 @@
 		0E0EA75B266F6B8F0043C2F2 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
-				0E0EA74D266F664A0043C2F2 /* Assets.xcassets */,
+				0E0EA761266F89BC0043C2F2 /* Constants.swift */,
 				0E0EA744266F66480043C2F2 /* AppDelegate.swift */,
 				0E0EA746266F66480043C2F2 /* SceneDelegate.swift */,
 				0E0EA752266F664A0043C2F2 /* Info.plist */,
+				0E0EA74D266F664A0043C2F2 /* Assets.xcassets */,
 			);
 			path = Supporting;
+			sourceTree = "<group>";
+		};
+		0E0EA75E266F6D7A0043C2F2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0E0EA758266F6B640043C2F2 /* TableViewController.swift */,
+				0E0EA75C266F6CDA0043C2F2 /* NewsCell.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0E0EA763266F89F70043C2F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E0EA75F266F89880043C2F2 /* NewtworkNewsManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +179,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E0EA745266F66480043C2F2 /* AppDelegate.swift in Sources */,
+				0E0EA760266F89880043C2F2 /* NewtworkNewsManager.swift in Sources */,
 				0E0EA747266F66480043C2F2 /* SceneDelegate.swift in Sources */,
+				0E0EA75D266F6CDA0043C2F2 /* NewsCell.swift in Sources */,
 				0E0EA759266F6B640043C2F2 /* TableViewController.swift in Sources */,
+				0E0EA762266F89BC0043C2F2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +332,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L3S8MU2XD5;
-				INFOPLIST_FILE = NYTPopularArticles/Info.plist;
+				INFOPLIST_FILE = NYTPopularArticles/supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,7 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L3S8MU2XD5;
-				INFOPLIST_FILE = NYTPopularArticles/Info.plist;
+				INFOPLIST_FILE = NYTPopularArticles/supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
