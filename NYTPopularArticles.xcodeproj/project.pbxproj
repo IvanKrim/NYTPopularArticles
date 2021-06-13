@@ -16,6 +16,7 @@
 		0E0EA75D266F6CDA0043C2F2 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0EA75C266F6CDA0043C2F2 /* NewsCell.swift */; };
 		0E0EA760266F89880043C2F2 /* NewtworkNewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0EA75F266F89880043C2F2 /* NewtworkNewsManager.swift */; };
 		0E0EA762266F89BC0043C2F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0EA761266F89BC0043C2F2 /* Constants.swift */; };
+		0E16B2E1267610AD003DE7C5 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16B2E0267610AC003DE7C5 /* NewsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0E0EA75C266F6CDA0043C2F2 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		0E0EA75F266F89880043C2F2 /* NewtworkNewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtworkNewsManager.swift; sourceTree = "<group>"; };
 		0E0EA761266F89BC0043C2F2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0E16B2E0267610AC003DE7C5 /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				0E0EA75F266F89880043C2F2 /* NewtworkNewsManager.swift */,
+				0E16B2E0267610AC003DE7C5 /* NewsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				0E0EA75D266F6CDA0043C2F2 /* NewsCell.swift in Sources */,
 				0E0EA759266F6B640043C2F2 /* TableViewController.swift in Sources */,
 				0E0EA762266F89BC0043C2F2 /* Constants.swift in Sources */,
+				0E16B2E1267610AD003DE7C5 /* NewsData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

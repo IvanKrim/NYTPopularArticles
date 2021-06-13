@@ -14,10 +14,25 @@ struct NetworkNewsManager {
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
-                let dataString = String(data: data, encoding: .utf8)
-                print(dataString ?? "Data ERROR ")
+                parseJSON(withData: data)
+                
             }
         }.resume()
+    }
+    
+    func parseJSON(withData data: Data) {
+        let decoder = JSONDecoder()
+        
+        do {
+            let newsData = try decoder.decode(NewsData.self, from: data)
+            for title in newsData.results {
+                print("Это Title: \(title.title)")
+                print("Это Abstract: \(title.abstract)")
+            }
+            
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
 }
 
