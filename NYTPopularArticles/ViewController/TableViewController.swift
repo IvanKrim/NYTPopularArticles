@@ -9,35 +9,54 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    let networkNewsManager = NetworkNewsManager()
-    
+    private var newsData: [NewsData] = []
+    private var spinnerView = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        spinnerView = showSpinner(in: tableView)
+        
         tableView.rowHeight = 170
         
-        networkNewsManager.fetchPopularNews()
+        
+        
     }
     
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 5
+        newsData.count
+
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 1
+        1
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsCell
+       
         return cell
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        <#code#>
+//    }
+    
+}
+
+
+extension TableViewController {
+    private func showSpinner(in view: UIView) -> UIActivityIndicatorView {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.startAnimating()
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        
+        view.addSubview(activityIndicator)
+        
+        return activityIndicator
+    }
 }

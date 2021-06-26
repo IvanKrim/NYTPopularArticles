@@ -61,6 +61,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="abstractLabel" destination="00V-CG-HLM" id="pbY-Sl-hrH"/>
+                                    <outlet property="mediaImage" destination="Hhr-SA-6lg" id="mwB-y2-JKc"/>
                                     <outlet property="titleLabel" destination="D4K-DN-Rb2" id="Vwx-Sx-Efo"/>
                                 </connections>
                             </tableViewCell>

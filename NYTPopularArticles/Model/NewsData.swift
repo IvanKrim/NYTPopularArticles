@@ -5,13 +5,17 @@
 //  Created by Kalabishka Ivan on 13.06.2021.
 //
 
-import Foundation
 
-struct NewsData: Codable{
-    let results: [Result]
+struct NewsData: Codable{ // все данные хранятся тут
+    let results: [Result]?
 }
 
 struct Result: Codable {
-    let title: String
-    let abstract: String
+    let title: String?
+    let abstract: String?
+    let multimedia: [Multimedia]?
+}
+
+struct Multimedia: Codable {
+    let url: String
 }
