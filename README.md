@@ -1,4 +1,6 @@
 # UIKit-NYTPopularArticles
-## - UIKit
-## - URLSession
-## - MVC 
+
+### This application includes:
+#### - UIKit
+#### - URLSession
+#### - MVC 
